@@ -4,11 +4,9 @@
 
 body {
     background-color: azure;
-}
-
-.form {
     text-align: center;
 }
+
 
 .send-box {
     width: var(--size);

@@ -1,5 +1,25 @@
 <?php
+    if(isset($_POST['submit'])){
+        $num1 = $_POST['num1'];
+        $op = $_POST['operator'];
+        $num2 = $_POST['num2'];
+        $result = 0;
 
+        switch($op){
+            case "+":
+                $result =  $num1 + $num2;
+            break;
+            case "-":
+                $result =  $num1 - $num2;
+            break;
+            case "*":
+                $result =  $num1 * $num2;
+            break;
+            case "/":
+                $result =  $num1 / $num2;
+            break;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,13 +32,13 @@
     <title>Simple Calculator</title>
 </head>
 <body>
-    <form action="" class="form">
+    <form method="POST">
         <h1 class="title">Calculator in PHP</h1>
-        <input type="text" name="submit1" class="send-box" placeholder="First Number">
+        <input type="text" name="num1" class="send-box" placeholder="First Number">
         <input type="text" name="operator" class="send-box" placeholder="Operator">
-        <input type="text" name="submit2" class="send-box" placeholder="Second Number"><br>
-        <input type="button" value="Done!" class="btn">
-        <input type="text" name="result" class="send-box hidden">
+        <input type="text" name="num2" class="send-box" placeholder="Second Number"><br>
+        <input type="submit" value="Done!" class="btn" name="submit">
     </form>
+    <input type="text" name="result" class="send-box" value="<?= $result ?>" >
 </body>
 </html>
