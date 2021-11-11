@@ -34,11 +34,12 @@
 <body>
     <form method="POST">
         <h1 class="title">Calculator in PHP</h1>
+        <p>Operators: <b>+</b>  <b>-</b>  <b>*</b>  <b>/</b></p>
         <input type="text" name="num1" class="send-box" placeholder="First Number">
         <input type="text" name="operator" class="send-box" placeholder="Operator">
         <input type="text" name="num2" class="send-box" placeholder="Second Number"><br>
         <input type="submit" value="Done!" class="btn" name="submit">
     </form>
-    <input type="text" name="result" class="send-box" value="<?= $result ?>" >
+    <input type="text" name="result" class="send-box" value="<?= $result ?>" disabled>
 </body>
 </html>
